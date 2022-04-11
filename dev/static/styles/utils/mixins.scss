@@ -1,0 +1,13 @@
+@mixin size($a,$b: $a) {
+  width: $a;
+  height: $b;
+}
+@mixin media($minmax, $media) {
+  @each $size, $resolution in $breakpoints {
+    @if $media == $size {
+      @media only screen and (#{$minmax}-width: $resolution) {
+        @content;
+      }
+    }
+  }
+}

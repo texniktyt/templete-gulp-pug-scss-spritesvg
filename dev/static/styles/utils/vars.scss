@@ -1,0 +1,66 @@
+// Colors
+$white:     #ffffff;
+$black:     #262728;
+$black-l:   #303132; // фон футера
+$green:     #76a21e; // наведение на белую кнопку зеленый текст
+$green-d:   #536a23;
+$green-sv:  #9fbe62; // наведение на зеленую кнопку
+$green-l:   #cfd6c1;
+$yellow:    #ffcc29;
+$red:       #f8485e;
+$blue:      #7c83fd;
+$grey:      #dadbdc; // линии шапки, обводка категории, разделитель в карточках, квадратики
+$grey-ll:   #e0e1e2; // обводка стрелок
+$grey-lll:  #f8f9fa; // фон
+$grey-llll: #ebebec; // зачеркивание
+$grey-n:    #6f6f70; // линия футера, текст футера(30%)
+$grey-d:    #a8a9aa; // даты, зачеркнутые цены, наведение на кнопку белая черный текст, хлебные крошки 
+$grey-f:    #848485; // наименования футтера
+
+
+
+$line-header: $grey;      // линии шапки
+$obvod-str:   $grey-ll;   // обводка стрелок
+$date:        $grey-d;    // даты
+$obvod-cat:   $grey;      // обводка категории
+$line-kart:   $grey;      // разделитель в карточках
+$price-z:     $grey-d;    // зачеркнутые цены
+$zachert:     $grey-llll; // зачеркивание
+$kvadrat:     $grey;      // квадратики
+$line-footer: $grey-n;    // линия футера
+$text-footer: $grey-n;    // текст футера(30%)
+
+$fon:         $grey-lll;  // фон
+$fon-footer:  $black-l;   // фон футера
+
+$but-g-a: $green-sv;      // наведение на зеленую кнопку
+$but-wb-a: $grey-d;       // наведение на белую кнопку черный текст
+$but-wg-a: $green;        // наведение на белую кнопку зеленый текст
+
+// Sizes
+$base-font-size: 16px;
+$base-font-size-tablet: 14px;
+$base-font-size-mobile: 12px;
+
+//1248px,
+$breakpoints: (
+  "phone"       : 400px,
+  "phone-wide"  : 480px,
+  "phablet"     : 560px,
+  "tablet-small": 640px,
+  "tablet"      : 768px,
+  "tablet-wide" : 1024px,
+  "desktop"     : 1230px, 
+  "desktop-wide": 1440px
+);
+
+$content-size: 1170px;
+
+// Fonts
+$semi-bold:   "Manrope-SemiBold";
+$regular:     "Manrope-Regular";
+$medium:      "Manrope-Medium";
+$light:       "Manrope-Light";
+$extra-light: "Manrope-ExtraLight";
+$extra-bold:  "Manrope-ExtraBold";
+$bold:        "Manrope-Bold";

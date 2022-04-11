@@ -1,0 +1,140 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+/* LIST
+
+1. Общие
+2. Модули
+
+*/
+
+// 1. Общие
+html {
+  font-family: $regular;
+  font-size: $base-font-size;
+  height: 100%;
+  @include media("max", "desktop") {
+    font-size: $base-font-size-tablet;
+  }
+  @include media("max", "tablet") {
+    font-size: $base-font-size-mobile;
+  }
+}
+
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd { margin: 0; }
+
+a:not([class]) { text-decoration-skip-ink: auto; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select { font: inherit; }
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea { vertical-align: middle; }
+
+textarea { resize: none; }
+
+section { position: relative; }
+
+input,
+select,
+button { outline: none; }
+
+h1, h2, h3 {
+  font-size:36px;
+  @include media("max", "desktop") {
+    font-size:26px;
+  }
+  @include media("max", "tablet") {
+    font-size:20px;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content { 
+  flex: 1 0 auto;
+  // padding:100px 0 0 0;
+  position: relative;
+  background-color: $fon;
+  @include media("max", "tablet") {
+    // padding:60px 0 0 0;
+  }
+}
+.container {
+  margin: 0 auto;
+  max-width: $content-size;
+  width: 100%;
+  padding:0 30px;
+  @include media("max", "tablet") {
+    padding:0 20px;
+  }
+  .row {
+    margin:0 -30px;
+    @include media("max", "desktop") {
+      padding:0 30px;
+    }
+    @include media("max", "tablet") {
+      margin:0 -20px;
+      padding:0 20px;
+    }
+  }
+}
+
+// 2. Модули
+@import "modules/modules";
